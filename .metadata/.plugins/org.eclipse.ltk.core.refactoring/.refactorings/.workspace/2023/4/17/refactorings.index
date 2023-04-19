@@ -1,0 +1,6 @@
+1681876470124	Delete resource 'IDMServiceConfigs/src/main/synapse-config/api/HelloWorld.xml'
+1681885372346	Delete resource 'IDMServiceConfigs/src/main/synapse-config/inbound-endpoints/SMPP.xml'
+1681885386927	Delete resource 'IDMServiceConfigs/src/main/synapse-config/local-entries/AMAZON_SQS_CONNECTION_1.xml'
+1681885403103	Delete resource 'IDMServiceConfigs/src/main/synapse-config/sequences/convert-backend-response.xml'
+1681885435537	Delete resource 'IDMServiceConfigs/src/main/synapse-config/sequences/request.xml'
+1681885443876	Delete resource 'IDMServiceConfigs/src/main/synapse-config/tasks/IDM-Polling-Schedule.xml'

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="IDM-Processing-Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log/>
+    <sequence key="convert-backend-response"/>
+    <amazonsqs.receiveMessage configKey="AMAZON_SQS_CONNECTION_1">
+        <queueId>494315182757</queueId>
+        <queueName>ChoreoTestSQS</queueName>
+    </amazonsqs.receiveMessage>
+    <log level="full"/>
+</sequence>
