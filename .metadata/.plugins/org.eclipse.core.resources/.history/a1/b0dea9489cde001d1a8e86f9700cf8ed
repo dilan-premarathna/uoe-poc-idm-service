@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="Enrich-IDM-Payload-Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property expression="json-eval($.id)" name="emp.id" scope="default" type="STRING"/>
+    <property expression="json-eval($.name)" name="emp.name" scope="default" type="STRING"/>
+    <property expression="json-eval($.age)" name="emp.age" scope="default" type="STRING"/>
+    <property expression="json-eval($.address)" name="emp.address" scope="default" type="STRING"/>
+    <property expression="json-eval($.salary)" name="emp.salary" scope="default" type="STRING"/>
+    <property name="app.clientId" scope="default" type="STRING" value="CBCe49UI2JXEDSBxVi_t38YlLQka"/>
+    <property name="app.clientSecret" scope="default" type="STRING" value="Ly4H_7o82o4thVZ68jKqqM1FFMEa"/>
+    <sequence key="Choreo_Oracle_GetAccessToken_Sequenc"/>
+    <property expression="get-property('emp.id')" name="REST_URL_POSTFIX" scope="axis2" type="STRING"/>
+    <property name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+    <call>
+        <endpoint>
+            <address uri="https://5ea3cd2c-5708-4489-bfc3-d82bd90520b2-dev.e1-us-east-azure.choreoapis.dev/rxrp/oracle-api/endpoint-9090-803/1.0.0/salaries/">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>1</progressionFactor>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </address>
+        </endpoint>
+    </call>
+    <payloadFactory media-type="json">
+        <format>{Employee Id : $1,
+           Address:$2,
+           Department:$3,
+           Salary:$4,
+           name:$5
+           }</format>
+        <args>
+            <arg evaluator="json" expression="$.employeeId"/>
+            <arg evaluator="json" expression="$.address"/>
+            <arg evaluator="json" expression="$.department"/>
+            <arg evaluator="json" expression="$.salary"/>
+            <arg evaluator="xml" expression="get-property('emp.name')" literal="true"/>
+        </args>
+    </payloadFactory>
+    <log level="full"/>
+</sequence>

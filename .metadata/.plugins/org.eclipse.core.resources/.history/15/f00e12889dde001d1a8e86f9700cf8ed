@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="IDM-Processing-Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log>
+        <property expression="json-eval($.process)" name="Need Processing"/>
+    </log>
+    <filter regex="true" source="json-eval($.process)">
+        <then>
+            <log level="custom">
+                <property name="Process " value="***true***"/>
+            </log>
+            <sequence key="Enrich-IDM-Payload-Sequence"/>
+        </then>
+        <else>
+            <log level="custom">
+                <property name="Process " value="***false***"/>
+            </log>
+        </else>
+    </filter>
+</sequence>

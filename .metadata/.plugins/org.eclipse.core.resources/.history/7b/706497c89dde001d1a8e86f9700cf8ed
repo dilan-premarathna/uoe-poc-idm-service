@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CloudAPI-Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property name="app.clientId" scope="default" type="STRING" value="lJF2MtbhjDIkSCz9VQ9m163kfXwa"/>
+    <property name="app.clientSecret" scope="default" type="STRING" value="jaH4OL2YBfd3RBOtzwXvjpumVCEa"/>
+    <sequence key="Choreo_Oracle_GetAccessToken_Sequenc"/>
+    <property name="HTTP_METHOD" scope="axis2" type="STRING" value="GET"/>
+    <call>
+        <endpoint>
+            <address uri="https://5ea3cd2c-5708-4489-bfc3-d82bd90520b2-dev.e1-us-east-azure.choreoapis.dev/rxrp/cloud-api/endpoint-9090-803/1.0.0/updateUserInfo">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>1</progressionFactor>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </address>
+        </endpoint>
+    </call>
+</sequence>

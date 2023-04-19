@@ -5,4 +5,16 @@
     <artifact name="IDM-Polling-InboundEndpoint" groupId="wso2.sampleHelloWorld.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/inbound-endpoints/IDM-Polling-InboundEndpoint.xml</file>
     </artifact>
+    <artifact name="Choreo_Oracle_GetAccessToken_Sequenc" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Choreo_Oracle_GetAccessToken_Sequenc.xml</file>
+    </artifact>
+    <artifact name="Enrich-IDM-Payload-Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Enrich-IDM-Payload-Sequence.xml</file>
+    </artifact>
+    <artifact name="Choreo_Token_Endpoint" groupId="wso2.sampleHelloWorld.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/Choreo_Token_Endpoint.xml</file>
+    </artifact>
+    <artifact name="CloudAPI-Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CloudAPI-Sequence.xml</file>
+    </artifact>
 </artifacts>

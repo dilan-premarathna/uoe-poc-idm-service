@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CloudAPI-Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property name="app.clientId" scope="default" type="STRING" value="CBCe49UI2JXEDSBxVi_t38YlLQka"/>
+    <property name="app.clientSecret" scope="default" type="STRING" value="Ly4H_7o82o4thVZ68jKqqM1FFMEa"/>
+    <sequence key="Choreo_Oracle_GetAccessToken_Sequenc"/>
+</sequence>
