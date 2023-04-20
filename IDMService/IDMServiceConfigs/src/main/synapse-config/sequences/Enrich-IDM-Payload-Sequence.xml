@@ -43,6 +43,7 @@
     <log level="full"/>
     <log level="full">
         <property name="Enrich-IDM-Payload-Sequence" value="before enrich"/>
+        <property expression="get-property('env', 'mySysProp')" name="ReadSystemProperty"/>
     </log>
     <enrich>
         <source clone="false" type="body"/>
