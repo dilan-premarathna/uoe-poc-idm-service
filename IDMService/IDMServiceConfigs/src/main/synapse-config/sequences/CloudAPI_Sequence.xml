@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="CloudAPI_Sequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property expression="get-property('env', 'CLOUD_API_CLIENTID')" name="app.clientId" scope="default" type="STRING"/>
+    <property expression="get-property('env', 'CLOUD_API_SECRET')" name="app.clientSecret" scope="default" type="STRING"/>
+    <sequence key="Choreo_GetAccessToken_Sequenc"/>
+    <property name="HTTP_METHOD" scope="axis2" type="STRING" value="POST"/>
+    <log level="custom">
+        <property name="CloudAPI-Sequence" value="before enrich"/>
+    </log>
+    <enrich>
+        <source clone="false" property="User_Info" type="property"/>
+        <target type="body"/>
+    </enrich>
+    <call>
+        <endpoint key="Cloud_API_Endpoint"/>
+    </call>
+</sequence>

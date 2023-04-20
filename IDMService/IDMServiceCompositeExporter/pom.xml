@@ -14,14 +14,17 @@
   <name>IDMServiceCompositeExporter</name>
   <description>IDMServiceCompositeExporter</description>
   <properties>
-    <wso2.sampleHelloWorld.inbound-endpoint_._IDM-Polling-InboundEndpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.inbound-endpoint_._IDM-Polling-InboundEndpoint>
+    <wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>
+    <wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>
+    <wso2.sampleHelloWorld.inbound-endpoint_._IDM_Polling_InboundEndpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.inbound-endpoint_._IDM_Polling_InboundEndpoint>
+    <wso2.sampleHelloWorld.sequence_._Error_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Error_Sequence>
     <wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>
-    <wso2.sampleHelloWorld.sequence_._CloudAPI-Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._CloudAPI-Sequence>
+    <wso2.sampleHelloWorld.sequence_._IDM_Processing_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._IDM_Processing_Sequence>
+    <wso2.sampleHelloWorld.sequence_._CloudAPI_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._CloudAPI_Sequence>
     <com.example.lib_._amazonsqs-connector>capp/EnterpriseServiceBus</com.example.lib_._amazonsqs-connector>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    <wso2.sampleHelloWorld.sequence_._Choreo_Oracle_GetAccessToken_Sequenc>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Choreo_Oracle_GetAccessToken_Sequenc>
-    <wso2.sampleHelloWorld.sequence_._Enrich-IDM-Payload-Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Enrich-IDM-Payload-Sequence>
-    <wso2.sampleHelloWorld.sequence_._IDM-Processing-Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._IDM-Processing-Sequence>
+    <wso2.sampleHelloWorld.sequence_._Choreo_GetAccessToken_Sequenc>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Choreo_GetAccessToken_Sequenc>
+    <wso2.sampleHelloWorld.sequence_._Enrich_IDM_Payload_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Enrich_IDM_Payload_Sequence>
   </properties>
   <dependencies>
     <dependency>
@@ -37,32 +40,50 @@
       <type>xml</type>
     </dependency>
     <dependency>
+      <groupId>wso2.sampleHelloWorld.endpoint</groupId>
+      <artifactId>Cloud_API_Endpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>wso2.sampleHelloWorld.endpoint</groupId>
+      <artifactId>Oracle_API_Endpoint</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
       <groupId>wso2.sampleHelloWorld.inbound-endpoint</groupId>
-      <artifactId>IDM-Polling-InboundEndpoint</artifactId>
+      <artifactId>IDM_Polling_InboundEndpoint</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>wso2.sampleHelloWorld.sequence</groupId>
-      <artifactId>Choreo_Oracle_GetAccessToken_Sequenc</artifactId>
+      <artifactId>Choreo_GetAccessToken_Sequenc</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>wso2.sampleHelloWorld.sequence</groupId>
-      <artifactId>CloudAPI-Sequence</artifactId>
+      <artifactId>CloudAPI_Sequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>wso2.sampleHelloWorld.sequence</groupId>
-      <artifactId>Enrich-IDM-Payload-Sequence</artifactId>
+      <artifactId>Enrich_IDM_Payload_Sequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>wso2.sampleHelloWorld.sequence</groupId>
-      <artifactId>IDM-Processing-Sequence</artifactId>
+      <artifactId>Error_Sequence</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>wso2.sampleHelloWorld.sequence</groupId>
+      <artifactId>IDM_Processing_Sequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

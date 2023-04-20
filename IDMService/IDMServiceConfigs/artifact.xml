@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><artifacts>
-    <artifact name="IDM-Processing-Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/IDM-Processing-Sequence.xml</file>
-    </artifact>
-    <artifact name="IDM-Polling-InboundEndpoint" groupId="wso2.sampleHelloWorld.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/inbound-endpoints/IDM-Polling-InboundEndpoint.xml</file>
-    </artifact>
-    <artifact name="Choreo_Oracle_GetAccessToken_Sequenc" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/Choreo_Oracle_GetAccessToken_Sequenc.xml</file>
-    </artifact>
-    <artifact name="Enrich-IDM-Payload-Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/Enrich-IDM-Payload-Sequence.xml</file>
-    </artifact>
     <artifact name="Choreo_Token_Endpoint" groupId="wso2.sampleHelloWorld.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/Choreo_Token_Endpoint.xml</file>
     </artifact>
-    <artifact name="CloudAPI-Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/CloudAPI-Sequence.xml</file>
+    <artifact name="Choreo_GetAccessToken_Sequenc" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Choreo_GetAccessToken_Sequenc.xml</file>
+    </artifact>
+    <artifact name="CloudAPI_Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/CloudAPI_Sequence.xml</file>
+    </artifact>
+    <artifact name="Enrich_IDM_Payload_Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Enrich_IDM_Payload_Sequence.xml</file>
+    </artifact>
+    <artifact name="IDM_Processing_Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/IDM_Processing_Sequence.xml</file>
+    </artifact>
+    <artifact name="IDM_Polling_InboundEndpoint" groupId="wso2.sampleHelloWorld.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/IDM_Polling_InboundEndpoint.xml</file>
+    </artifact>
+    <artifact name="Error_Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/Error_Sequence.xml</file>
+    </artifact>
+    <artifact name="Cloud_API_Endpoint" groupId="wso2.sampleHelloWorld.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/Cloud_API_Endpoint.xml</file>
+    </artifact>
+    <artifact name="Oracle_API_Endpoint" groupId="wso2.sampleHelloWorld.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/Oracle_API_Endpoint.xml</file>
     </artifact>
 </artifacts>
