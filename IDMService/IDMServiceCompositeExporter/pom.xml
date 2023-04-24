@@ -14,16 +14,17 @@
   <name>IDMServiceCompositeExporter</name>
   <description>IDMServiceCompositeExporter</description>
   <properties>
-    <wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>
-    <wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>
     <wso2.sampleHelloWorld.inbound-endpoint_._IDM_Polling_InboundEndpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.inbound-endpoint_._IDM_Polling_InboundEndpoint>
     <wso2.sampleHelloWorld.sequence_._Error_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Error_Sequence>
-    <wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>
     <wso2.sampleHelloWorld.sequence_._IDM_Processing_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._IDM_Processing_Sequence>
     <wso2.sampleHelloWorld.sequence_._CloudAPI_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._CloudAPI_Sequence>
     <com.example.lib_._amazonsqs-connector>capp/EnterpriseServiceBus</com.example.lib_._amazonsqs-connector>
-    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
     <wso2.sampleHelloWorld.sequence_._Choreo_GetAccessToken_Sequenc>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Choreo_GetAccessToken_Sequenc>
+    <wso2.sampleHelloWorld.sequence_._SQS_Fault_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._SQS_Fault_Sequence>
+    <wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Cloud_API_Endpoint>
+    <wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Oracle_API_Endpoint>
+    <wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.endpoint_._Choreo_Token_Endpoint>
+    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
     <wso2.sampleHelloWorld.sequence_._Enrich_IDM_Payload_Sequence>capp/EnterpriseServiceBus</wso2.sampleHelloWorld.sequence_._Enrich_IDM_Payload_Sequence>
   </properties>
   <dependencies>
@@ -84,6 +85,12 @@
     <dependency>
       <groupId>wso2.sampleHelloWorld.sequence</groupId>
       <artifactId>IDM_Processing_Sequence</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>wso2.sampleHelloWorld.sequence</groupId>
+      <artifactId>SQS_Fault_Sequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

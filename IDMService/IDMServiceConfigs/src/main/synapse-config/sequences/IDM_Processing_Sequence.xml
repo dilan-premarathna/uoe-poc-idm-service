@@ -12,6 +12,7 @@
             <log level="custom">
                 <property name="Process " value="false"/>
             </log>
+            <sequence key="SQS_Fault_Sequence"/>
         </else>
     </filter>
 </sequence>

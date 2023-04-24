@@ -26,4 +26,7 @@
     <artifact name="Oracle_API_Endpoint" groupId="wso2.sampleHelloWorld.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/Oracle_API_Endpoint.xml</file>
     </artifact>
+    <artifact name="SQS_Fault_Sequence" groupId="wso2.sampleHelloWorld.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SQS_Fault_Sequence.xml</file>
+    </artifact>
 </artifacts>
